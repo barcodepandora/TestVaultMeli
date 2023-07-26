@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B445B31F-2E8D-4806-99C7-7B45FE7C4F60"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27816280-7DF0-47E4-A6FF-9AAC5E96FDDF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestVaultMeli/Networking/APIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "requestProductListMock(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA8294D3-4E38-4B82-8D82-2996070CBD00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestVaultMeli/Networking/APIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "requestProductListMock(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA8294D3-4E38-4B82-8D82-2996070CBD00 - 71ff697baa3842fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;TestVaultMeli.ResultsDecodable, Alamofire.AFError&gt;) -&gt; () in static TestVaultMeli.APIClient.requestProductListMock(completion: (Swift.Optional&lt;TestVaultMeli.ResultsDecodable&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestVaultMeli"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanmanuelmoreno/Documents/TestVaultMeli/TestVaultMeli/TestVaultMeli/Networking/APIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "EA8294D3-4E38-4B82-8D82-2996070CBD00 - 71ff697baa3842fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;TestVaultMeli.ResultsDecodable, Alamofire.AFError&gt;) -&gt; () in static TestVaultMeli.APIClient.requestProductListMock(completion: (Swift.Optional&lt;TestVaultMeli.ResultsDecodable&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestVaultMeli"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanmanuelmoreno/Documents/TestVaultMeli/TestVaultMeli/TestVaultMeli/Networking/APIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "414">
+               </Location>
+               <Location
+                  uuid = "EA8294D3-4E38-4B82-8D82-2996070CBD00 - 2eb30e38d5ddb983"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;TestVaultMeli.DomainDecodable&gt;, Alamofire.AFError&gt;) -&gt; () in static TestVaultMeli.APIClient.requestProductListMock(completion: (Swift.Optional&lt;TestVaultMeli.ResultsDecodable&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestVaultMeli"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanmanuelmoreno/Documents/TestVaultMeli/TestVaultMeli/TestVaultMeli/Networking/APIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "393">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
