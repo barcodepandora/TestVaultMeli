@@ -11,11 +11,17 @@ class ProductListViewController: UIViewController {
     
     @IBOutlet weak var tblProductList: UITableView!
     
+    var envelope: ProductListEnvelope!
     let identifier = "ProductListTableViewCell"
     var interactor: ProductListInteractor!
     var presenter: ProductListPresenter!
     var modelList: [Domain.ViewModel]!
     var modelListFiltered: [Domain.ViewModel]!
+    
+    convenience init(envelope: ProductListEnvelope) {
+        self.init()
+        self.envelope = envelope
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +76,7 @@ class ProductListViewController: UIViewController {
 // MARK: UITableView
 extension ProductListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let router = RecipeListRouter().routeToRecipe(from: self, to: RecipeViewController(recipe: self.modelListFiltered[indexPath.row]))
+        ProductListRouter().routeToProduct(from: self, to: ProductViewController(product: self.modelListFiltered[indexPath.section].attributes[indexPath.row]))
     }
 }
 
@@ -105,5 +111,14 @@ extension ProductListViewController: UITableViewDataSource {
 //        cell.lblProduct.text = attribute.name
 //        return cell
 
+    }
+}
+
+class ProductListEnvelope {
+    var item: String!
+    
+    convenience init(item: String) {
+        self.init()
+        self.item = item
     }
 }

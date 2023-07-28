@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Thread.sleep(forTimeInterval: 1)
         guard let aScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: aScene)
-        let navigator = UINavigationController(rootViewController: ProductListViewController())
+//        let navigator = UINavigationController(rootViewController: ProductListViewController())
+        let navigator = UINavigationController(rootViewController: XploreViewController())
         window?.rootViewController = navigator
         window?.makeKeyAndVisible()
 

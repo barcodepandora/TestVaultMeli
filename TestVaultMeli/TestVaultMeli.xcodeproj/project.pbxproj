@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562266F32A7424950025FB98 /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562266F22A7424950025FB98 /* ProductListRouter.swift */; };
+		562266F82A7425AE0025FB98 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562266F62A7425AE0025FB98 /* ProductViewController.swift */; };
+		562266F92A7425AE0025FB98 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562266F72A7425AE0025FB98 /* ProductViewController.xib */; };
+		562266FD2A743B6C0025FB98 /* XploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562266FB2A743B6C0025FB98 /* XploreViewController.swift */; };
+		562266FE2A743B6C0025FB98 /* XploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562266FC2A743B6C0025FB98 /* XploreViewController.xib */; };
+		562267002A743F0D0025FB98 /* XploreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562266FF2A743F0D0025FB98 /* XploreRouter.swift */; };
 		5633D4572A7159FA000F3A83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4562A7159FA000F3A83 /* AppDelegate.swift */; };
 		5633D4592A7159FA000F3A83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4582A7159FA000F3A83 /* SceneDelegate.swift */; };
 		5633D45B2A7159FA000F3A83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D45A2A7159FA000F3A83 /* ViewController.swift */; };
@@ -58,6 +64,12 @@
 		0AC0CED3E0B31380B73AA188 /* Pods-TestVaultMeliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestVaultMeliTests.debug.xcconfig"; path = "Target Support Files/Pods-TestVaultMeliTests/Pods-TestVaultMeliTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1AFC44BB2D1BDB2CB1AAD856 /* Pods-TestVaultMeli-TestVaultMeliUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestVaultMeli-TestVaultMeliUITests.release.xcconfig"; path = "Target Support Files/Pods-TestVaultMeli-TestVaultMeliUITests/Pods-TestVaultMeli-TestVaultMeliUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5112E59B5CFFCBBA85868F05 /* Pods-TestVaultMeli-TestVaultMeliUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestVaultMeli-TestVaultMeliUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestVaultMeli-TestVaultMeliUITests/Pods-TestVaultMeli-TestVaultMeliUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		562266F22A7424950025FB98 /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
+		562266F62A7425AE0025FB98 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		562266F72A7425AE0025FB98 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		562266FB2A743B6C0025FB98 /* XploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XploreViewController.swift; sourceTree = "<group>"; };
+		562266FC2A743B6C0025FB98 /* XploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XploreViewController.xib; sourceTree = "<group>"; };
+		562266FF2A743F0D0025FB98 /* XploreRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XploreRouter.swift; sourceTree = "<group>"; };
 		5633D4532A7159FA000F3A83 /* TestVaultMeli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestVaultMeli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5633D4562A7159FA000F3A83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5633D4582A7159FA000F3A83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +133,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		562266F12A74245E0025FB98 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				562266F62A7425AE0025FB98 /* ProductViewController.swift */,
+				562266F72A7425AE0025FB98 /* ProductViewController.xib */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		562266FA2A743B460025FB98 /* Xplore */ = {
+			isa = PBXGroup;
+			children = (
+				562266FB2A743B6C0025FB98 /* XploreViewController.swift */,
+				562266FC2A743B6C0025FB98 /* XploreViewController.xib */,
+				562266FF2A743F0D0025FB98 /* XploreRouter.swift */,
+			);
+			path = Xplore;
+			sourceTree = "<group>";
+		};
 		5633D44A2A7159F9000F3A83 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +177,8 @@
 		5633D4552A7159FA000F3A83 /* TestVaultMeli */ = {
 			isa = PBXGroup;
 			children = (
+				562266FA2A743B460025FB98 /* Xplore */,
+				562266F12A74245E0025FB98 /* Product */,
 				5633D49D2A717977000F3A83 /* Entity */,
 				5633D49A2A717660000F3A83 /* Networking */,
 				5633D4972A717436000F3A83 /* Domain */,
@@ -197,6 +230,7 @@
 				5633D4952A717305000F3A83 /* ProductListPresenter.swift */,
 				56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */,
 				56C556E62A71EF78004AD9D2 /* ProductListTableViewCell.xib */,
+				562266F22A7424950025FB98 /* ProductListRouter.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -361,10 +395,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562266FE2A743B6C0025FB98 /* XploreViewController.xib in Resources */,
 				56C556E82A71EF78004AD9D2 /* ProductListTableViewCell.xib in Resources */,
 				5633D4662A7159FB000F3A83 /* LaunchScreen.storyboard in Resources */,
 				5633D4632A7159FB000F3A83 /* Assets.xcassets in Resources */,
 				5633D4922A71603A000F3A83 /* ProductListViewController.xib in Resources */,
+				562266F92A7425AE0025FB98 /* ProductViewController.xib in Resources */,
 				5633D45E2A7159FA000F3A83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,11 +532,15 @@
 				5633D4A72A718FB7000F3A83 /* Attribute.swift in Sources */,
 				5633D49F2A717996000F3A83 /* ResultDecodable.swift in Sources */,
 				5633D45B2A7159FA000F3A83 /* ViewController.swift in Sources */,
+				562266FD2A743B6C0025FB98 /* XploreViewController.swift in Sources */,
+				562267002A743F0D0025FB98 /* XploreRouter.swift in Sources */,
 				5633D4942A7172F3000F3A83 /* ProductListInteractor.swift in Sources */,
 				5633D4962A717305000F3A83 /* ProductListPresenter.swift in Sources */,
 				5633D49C2A717672000F3A83 /* APIClient.swift in Sources */,
+				562266F82A7425AE0025FB98 /* ProductViewController.swift in Sources */,
 				5633D48B2A715F1F000F3A83 /* ComeInRouter.swift in Sources */,
 				5633D4612A7159FA000F3A83 /* TestVaultMeli.xcdatamodeld in Sources */,
+				562266F32A7424950025FB98 /* ProductListRouter.swift in Sources */,
 				5633D4A12A718A12000F3A83 /* DomainDecodable.swift in Sources */,
 				56C556E72A71EF78004AD9D2 /* ProductListTableViewCell.swift in Sources */,
 				5633D4A32A718B63000F3A83 /* AttributeDecodable.swift in Sources */,
