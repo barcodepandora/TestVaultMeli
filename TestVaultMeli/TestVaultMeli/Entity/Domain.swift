@@ -13,6 +13,7 @@ enum Domain {
         var domain_name: String
         var category_id: String
         var category_name: String
+        var attributes: [Attribute.Request]
     }
     
     struct Response {
@@ -20,6 +21,7 @@ enum Domain {
         var domain_name: String
         var category_id: String
         var category_name: String
+        var attributes: [Attribute.Response]
     }
     
     struct ViewModel {
@@ -27,5 +29,6 @@ enum Domain {
         var domain_name: String
         var category_id: String
         var category_name: String
+        var attributes: [Attribute.ViewModel]
     }
 }

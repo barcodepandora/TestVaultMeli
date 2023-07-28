@@ -29,6 +29,8 @@
 		5633D4A32A718B63000F3A83 /* AttributeDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A22A718B63000F3A83 /* AttributeDecodable.swift */; };
 		5633D4A52A718F4F000F3A83 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A42A718F4F000F3A83 /* Domain.swift */; };
 		5633D4A72A718FB7000F3A83 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A62A718FB7000F3A83 /* Attribute.swift */; };
+		56C556E72A71EF78004AD9D2 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */; };
+		56C556E82A71EF78004AD9D2 /* ProductListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56C556E62A71EF78004AD9D2 /* ProductListTableViewCell.xib */; };
 		5E58D6F0E4572ABE0C89031F /* Pods_TestVaultMeliTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E2C3FC3D954ED32E9D2C93 /* Pods_TestVaultMeliTests.framework */; };
 		B7F6580523AC8FD99CA78881 /* Pods_TestVaultMeli_TestVaultMeliUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAB9933980C2923380B1EE8 /* Pods_TestVaultMeli_TestVaultMeliUITests.framework */; };
 		E344C7853C4AEE8D276B3DE1 /* Pods_TestVaultMeli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A54F88F62A2C9FB78859B1D /* Pods_TestVaultMeli.framework */; };
@@ -82,6 +84,8 @@
 		5633D4A22A718B63000F3A83 /* AttributeDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeDecodable.swift; sourceTree = "<group>"; };
 		5633D4A42A718F4F000F3A83 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		5633D4A62A718FB7000F3A83 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
+		56C556E62A71EF78004AD9D2 /* ProductListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListTableViewCell.xib; sourceTree = "<group>"; };
 		6A54F88F62A2C9FB78859B1D /* Pods_TestVaultMeli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestVaultMeli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAB9933980C2923380B1EE8 /* Pods_TestVaultMeli_TestVaultMeliUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestVaultMeli_TestVaultMeliUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		727ED7FAFCD04F4AFAE4E57B /* Pods-TestVaultMeliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestVaultMeliTests.release.xcconfig"; path = "Target Support Files/Pods-TestVaultMeliTests/Pods-TestVaultMeliTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				5633D4902A71603A000F3A83 /* ProductListViewController.xib */,
 				5633D4932A7172F3000F3A83 /* ProductListInteractor.swift */,
 				5633D4952A717305000F3A83 /* ProductListPresenter.swift */,
+				56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */,
+				56C556E62A71EF78004AD9D2 /* ProductListTableViewCell.xib */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C556E82A71EF78004AD9D2 /* ProductListTableViewCell.xib in Resources */,
 				5633D4662A7159FB000F3A83 /* LaunchScreen.storyboard in Resources */,
 				5633D4632A7159FB000F3A83 /* Assets.xcassets in Resources */,
 				5633D4922A71603A000F3A83 /* ProductListViewController.xib in Resources */,
@@ -495,6 +502,7 @@
 				5633D48B2A715F1F000F3A83 /* ComeInRouter.swift in Sources */,
 				5633D4612A7159FA000F3A83 /* TestVaultMeli.xcdatamodeld in Sources */,
 				5633D4A12A718A12000F3A83 /* DomainDecodable.swift in Sources */,
+				56C556E72A71EF78004AD9D2 /* ProductListTableViewCell.swift in Sources */,
 				5633D4A32A718B63000F3A83 /* AttributeDecodable.swift in Sources */,
 				5633D4572A7159FA000F3A83 /* AppDelegate.swift in Sources */,
 				5633D4992A71744A000F3A83 /* GetProductListUseCase.swift in Sources */,

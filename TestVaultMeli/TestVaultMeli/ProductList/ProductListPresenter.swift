@@ -15,7 +15,7 @@ class ProductListPresenter {
     }
     
     func presentProductList(modelList: [Domain.ViewModel]) {
-//        self.vc!.presentRecipeList(modelList: modelList)
+        self.vc!.presentProductList(modelList: modelList)
     }
     
     func presentError(error: Error) {

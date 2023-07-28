@@ -18,13 +18,22 @@ class GetProductListUseCase {
         })
     }
     
-    func fromDecodableToResponse(response: ResultsDecodable) -> [Domain.Response] {
+    func fromDecodableToResponse(response: [DomainDecodable]) -> [Domain.Response] {
         var domainList: [Domain.Response] = []
-        for domain in response.results! {
+        var attributeList: [Attribute.Response] = []
+        for domain in response {
+            attributeList = []
+            for attribute in domain.attributes! {
+                attributeList.append(Attribute.Response(id: attribute.id!,
+                                                            name: attribute.name!,
+                                                            value_id: attribute.value_id!,
+                                                            value_name: attribute.value_name!))
+            }
             domainList.append(Domain.Response(domain_id: domain.domain_id!,
-                                             domain_name: domain.domain_name!,
-                                             category_id: domain.category_id!,
-                                             category_name: domain.category_name!))
+                                              domain_name: domain.domain_name!,
+                                              category_id: domain.category_id!,
+                                              category_name: domain.category_name!,
+                                              attributes: attributeList))
         }
         return domainList
     }

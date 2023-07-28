@@ -19,7 +19,7 @@ class APIClient {
         return JSONDecoder()
     }()
 
-    static func requestProductListMock(completion: @escaping (ResultsDecodable?, Error?) -> Void) {
+    static func requestProductListMock(completion: @escaping ([DomainDecodable]?, Error?) -> Void) {
         if !self.isInternetAvailable {
             completion(nil, NSError(domain: "", code: 401, userInfo: [ NSLocalizedDescriptionKey: "Internet KO"]))
         } else {
@@ -28,12 +28,11 @@ class APIClient {
                 debugPrint(response)
                 switch response.result {
                     case .success(let value):
-                    break
-//                        if value.results == nil || value.results!.isEmpty {
-//                            completion(nil, NSError(domain: "", code: -1234, userInfo: [ NSLocalizedDescriptionKey: "Data 0"]))
-//                        } else {
-//                            completion(value, nil)
-//                        }
+                        if value.isEmpty {
+                            completion(nil, NSError(domain: "", code: -1234, userInfo: [ NSLocalizedDescriptionKey: "Data 0"]))
+                        } else {
+                            completion(value, nil)
+                        }
                     case .failure(let error):
                         completion(nil, error)
                 }
