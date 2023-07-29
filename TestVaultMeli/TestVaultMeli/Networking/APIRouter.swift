@@ -32,7 +32,7 @@ enum APIRouter: URLRequestConvertible {
     private var parameters: Parameters {
         switch self {
         case .productList:
-            return [APIConstant.APIParameterKey.q:"celular%20iphone", APIConstant.APIParameterKey.limit:"1"]
+            return [APIConstant.APIParameterKey.q:"celular iphone", APIConstant.APIParameterKey.limit:"1"]
         }
     }
     

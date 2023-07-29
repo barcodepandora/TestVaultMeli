@@ -9,7 +9,7 @@ import Foundation
 
 class GetProductListUseCase {
     func fetchProductList(completion: @escaping ([Domain.Response]?, Error?) -> Void) {
-        APIClient.requestProductListMock(completion: { (response, error) in
+        APIClient.requestProductList(completion: { (response, error) in
             if let response = response {
                 completion(self.fromDecodableToResponse(response: response), nil)
             } else if let error = error {

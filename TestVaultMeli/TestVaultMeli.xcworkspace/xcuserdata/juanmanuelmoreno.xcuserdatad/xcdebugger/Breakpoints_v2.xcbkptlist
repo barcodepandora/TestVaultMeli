@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "requestProductListMock(completion:)"
+            landmarkName = "requestProductList(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EA8294D3-4E38-4B82-8D82-2996070CBD00"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestVaultMeli/Networking/APIClient.swift"
@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "requestProductListMock(completion:)"
+            landmarkName = "requestProductList(completion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -86,6 +86,21 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;TestVaultMeli.DomainDecodable&gt;, Alamofire.AFError&gt;) -&gt; () in static TestVaultMeli.APIClient.requestProductListMock(completion: (Swift.Optional&lt;Swift.Array&lt;TestVaultMeli.DomainDecodable&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestVaultMeli"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juanmanuelmoreno/Documents/TestVaultMeli/TestVaultMeli/TestVaultMeli/Networking/APIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "405">
+               </Location>
+               <Location
+                  uuid = "EA8294D3-4E38-4B82-8D82-2996070CBD00 - d2f4b2b16ed6a794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;TestVaultMeli.DomainDecodable&gt;, Alamofire.AFError&gt;) -&gt; () in static TestVaultMeli.APIClient.requestProductList(completion: (Swift.Optional&lt;Swift.Array&lt;TestVaultMeli.DomainDecodable&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "TestVaultMeli"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juanmanuelmoreno/Documents/TestVaultMeli/TestVaultMeli/TestVaultMeli/Networking/APIClient.swift"
