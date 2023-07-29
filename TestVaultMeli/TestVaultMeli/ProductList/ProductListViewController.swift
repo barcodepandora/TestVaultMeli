@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController {
+class ProductListViewController: BaseViewController {
     
     @IBOutlet weak var tblProductList: UITableView!
     
@@ -27,7 +27,6 @@ class ProductListViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print("inside ")
         self.presenter = ProductListPresenter(vc: self)
         self.interactor = ProductListInteractor(presenter: self.presenter)
         self.prepareTable()
@@ -45,14 +44,14 @@ class ProductListViewController: UIViewController {
 
     // MARK: Present product list
     func presentProductList(modelList: [Domain.ViewModel]) {
-//        self.removeSpinner()
+        self.removeSpinner()
         self.modelList = modelList
         self.modelListFiltered = self.modelList
         self.tblProductList.reloadData()
     }
 
     func presentError(error: Error) {
-//        self.removeSpinner()
+        self.removeSpinner()
         let alert = UIAlertController(title: "Error", message: "No se pueden consultar recetas. Intentar mas tarde", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -69,6 +68,7 @@ class ProductListViewController: UIViewController {
 
     // MARK: Business
     private func requireProductList() {
+        self.createSpinnerView()
         self.interactor.requestProductList()
     }
 }

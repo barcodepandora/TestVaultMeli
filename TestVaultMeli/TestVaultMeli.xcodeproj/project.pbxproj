@@ -38,6 +38,8 @@
 		5633D4A32A718B63000F3A83 /* AttributeDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A22A718B63000F3A83 /* AttributeDecodable.swift */; };
 		5633D4A52A718F4F000F3A83 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A42A718F4F000F3A83 /* Domain.swift */; };
 		5633D4A72A718FB7000F3A83 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A62A718FB7000F3A83 /* Attribute.swift */; };
+		566126522A75802C00FBB686 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566126512A75802C00FBB686 /* SpinnerViewController.swift */; };
+		566126542A7580E500FBB686 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566126532A7580E500FBB686 /* BaseViewController.swift */; };
 		56C556E72A71EF78004AD9D2 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */; };
 		56C556E82A71EF78004AD9D2 /* ProductListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56C556E62A71EF78004AD9D2 /* ProductListTableViewCell.xib */; };
 		5E58D6F0E4572ABE0C89031F /* Pods_TestVaultMeliTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E2C3FC3D954ED32E9D2C93 /* Pods_TestVaultMeliTests.framework */; };
@@ -102,6 +104,8 @@
 		5633D4A22A718B63000F3A83 /* AttributeDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeDecodable.swift; sourceTree = "<group>"; };
 		5633D4A42A718F4F000F3A83 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		5633D4A62A718FB7000F3A83 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		566126512A75802C00FBB686 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		566126532A7580E500FBB686 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
 		56C556E62A71EF78004AD9D2 /* ProductListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListTableViewCell.xib; sourceTree = "<group>"; };
 		6A54F88F62A2C9FB78859B1D /* Pods_TestVaultMeli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestVaultMeli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,12 +187,13 @@
 		5633D4552A7159FA000F3A83 /* TestVaultMeli */ = {
 			isa = PBXGroup;
 			children = (
-				562266FA2A743B460025FB98 /* Xplore */,
-				562266F12A74245E0025FB98 /* Product */,
 				5633D49D2A717977000F3A83 /* Entity */,
 				5633D49A2A717660000F3A83 /* Networking */,
 				5633D4972A717436000F3A83 /* UseCase */,
+				562266FA2A743B460025FB98 /* Xplore */,
 				5633D48C2A715FA4000F3A83 /* ProductList */,
+				562266F12A74245E0025FB98 /* Product */,
+				566126502A75801900FBB686 /* Butler */,
 				5633D4892A715E43000F3A83 /* ComeIn */,
 				5633D4562A7159FA000F3A83 /* AppDelegate.swift */,
 				5633D4582A7159FA000F3A83 /* SceneDelegate.swift */,
@@ -270,6 +275,15 @@
 				5633D4A62A718FB7000F3A83 /* Attribute.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		566126502A75801900FBB686 /* Butler */ = {
+			isa = PBXGroup;
+			children = (
+				566126512A75802C00FBB686 /* SpinnerViewController.swift */,
+				566126532A7580E500FBB686 /* BaseViewController.swift */,
+			);
+			path = Butler;
 			sourceTree = "<group>";
 		};
 		69E8AC9446B3EA59F7F03E39 /* Frameworks */ = {
@@ -543,6 +557,7 @@
 				5633D45B2A7159FA000F3A83 /* ViewController.swift in Sources */,
 				562266FD2A743B6C0025FB98 /* XploreViewController.swift in Sources */,
 				560DED732A755FFB00AC04B6 /* APIConstant.swift in Sources */,
+				566126542A7580E500FBB686 /* BaseViewController.swift in Sources */,
 				562267002A743F0D0025FB98 /* XploreRouter.swift in Sources */,
 				5633D4942A7172F3000F3A83 /* ProductListInteractor.swift in Sources */,
 				5633D4962A717305000F3A83 /* ProductListPresenter.swift in Sources */,
@@ -554,6 +569,7 @@
 				562266F32A7424950025FB98 /* ProductListRouter.swift in Sources */,
 				5633D4A12A718A12000F3A83 /* DomainDecodable.swift in Sources */,
 				56C556E72A71EF78004AD9D2 /* ProductListTableViewCell.swift in Sources */,
+				566126522A75802C00FBB686 /* SpinnerViewController.swift in Sources */,
 				5633D4A32A718B63000F3A83 /* AttributeDecodable.swift in Sources */,
 				5633D4572A7159FA000F3A83 /* AppDelegate.swift in Sources */,
 				5633D4992A71744A000F3A83 /* GetProductListUseCase.swift in Sources */,
