@@ -18,8 +18,8 @@ class GetProductListUseCase {
         })
     }
     
-    func fetchProductListSiteProduct(completion: @escaping (Site.Response?, Error?) -> Void) {
-        APIClient.requestProductListSiteProduct(completion: { (response, error) in
+    func fetchProductListSiteProduct(envelope: ProductListEnvelope, completion: @escaping (Site.Response?, Error?) -> Void) {
+        APIClient.requestProductListSiteProduct(envelope: envelope, completion: { (response, error) in
             if let response = response {
                 completion(self.fromDecodableToResponseSiteProduct(response: response), nil)
             } else if let error = error {

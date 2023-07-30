@@ -8,7 +8,10 @@
 import Foundation
 
 class XploreRouter {
-    func routeToProductList(from: XploreViewController, to: ProductListViewController) {
+    func routeToProductList(from: XploreViewController, to: ProductListViewController) throws {
+        if to.envelope.findBy.isEmpty {
+            throw MeliError.findByIsEmpty
+        }
         from.navigationController?.pushViewController(to, animated: true)
     }
 }

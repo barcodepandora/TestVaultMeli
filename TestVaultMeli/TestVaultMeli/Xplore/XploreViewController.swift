@@ -17,7 +17,14 @@ class XploreViewController: UIViewController {
     }
 
     @IBAction func didXplore(_ sender: Any) {
-        XploreRouter().routeToProductList(from: self, to: ProductListViewController(envelope: ProductListEnvelope(item: self.txtXplore.text!)))
+        do {
+            try XploreRouter().routeToProductList(from: self, to: ProductListViewController(envelope: ProductListEnvelope(item: self.txtXplore.text!)))
+        } catch MeliError.findByIsEmpty {
+            let alert = UIAlertController(title: "Error", message: "Escribir un producto", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } catch {}
+        
     }
     
     /*

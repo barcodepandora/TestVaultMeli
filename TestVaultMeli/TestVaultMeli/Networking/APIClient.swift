@@ -61,11 +61,11 @@ class APIClient {
         }
     }
 
-    static func requestProductListSiteProduct(completion: @escaping (SiteDecodable?, Error?) -> Void) {
+    static func requestProductListSiteProduct(envelope: ProductListEnvelope, completion: @escaping (SiteDecodable?, Error?) -> Void) {
         if !self.isInternetAvailable {
             completion(nil, NSError(domain: "", code: 401, userInfo: [ NSLocalizedDescriptionKey: "Internet KO"]))
         } else {
-            AF.request(APIRouter.productListSite(q: "iphone"))
+            AF.request(APIRouter.productListSite(q: envelope.findBy))
             .responseDecodable(of: SiteDecodable.self, decoder: decoder) { response in
                 debugPrint(response)
                 switch response.result {

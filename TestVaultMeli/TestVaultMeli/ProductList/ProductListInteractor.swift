@@ -15,7 +15,7 @@ class ProductListInteractor {
     }
 
     func requestProductListDomainAttribute() {
-        GetProductListUseCase().fetchProductListDomainAttribute( completion: { (response, error) in
+        GetProductListUseCase().fetchProductListDomainAttribute(completion: { (response, error) in
             if let response = response {
                 self.presenter!.presentProductListDomainAttribute(modelList: self.fromResponseToViewModelDomainAttribute(response: response))
             } else if let error = error {
@@ -25,7 +25,7 @@ class ProductListInteractor {
     }
   
     func requestProductListSiteProduct() {
-        GetProductListUseCase().fetchProductListSiteProduct( completion: { (response, error) in
+        GetProductListUseCase().fetchProductListSiteProduct(envelope: (self.presenter?.vc?.envelope!)!, completion: { (response, error) in
             if let response = response {
                 self.presenter!.presentProductListSiteProduct(modelList: self.fromResponseToViewModelSiteProduct(response: response).results)
             } else if let error = error {

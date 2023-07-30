@@ -109,7 +109,6 @@ extension ProductListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let attribute = self.modelListSiteFiltered[indexPath.row]
-
         let cell = self.tblProductList.dequeueReusableCell(withIdentifier: self.identifier, for: indexPath) as! ProductListTableViewCell
         cell.lblProduct.text = attribute.title
         return cell
@@ -117,7 +116,10 @@ extension ProductListViewController: UITableViewDataSource {
 }
 
 class ProductListEnvelope {
-    var item: String!
+    private var item: String!
+    var findBy: String {
+        get { return item }
+    }
     
     convenience init(item: String) {
         self.init()
