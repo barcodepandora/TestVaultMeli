@@ -31,13 +31,13 @@ final class TestNetworking: XCTestCase {
     }
 
     func testResponseNotNil() {
-        APIClient.requestProductListMock( completion: { (response, error) in
+        APIClient.requestProductListMockDomainAttribute( completion: { (response, error) in
             XCTAssertNotNil(response)
         })
     }
 
     func testDataNotEmpty() {
-        APIClient.requestProductListMock( completion: { (response, error) in
+        APIClient.requestProductListMockDomainAttribute( completion: { (response, error) in
             XCTAssertTrue(!(response!.isEmpty))
         })
     }

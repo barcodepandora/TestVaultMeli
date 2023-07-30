@@ -38,6 +38,10 @@
 		5633D4A32A718B63000F3A83 /* AttributeDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A22A718B63000F3A83 /* AttributeDecodable.swift */; };
 		5633D4A52A718F4F000F3A83 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A42A718F4F000F3A83 /* Domain.swift */; };
 		5633D4A72A718FB7000F3A83 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633D4A62A718FB7000F3A83 /* Attribute.swift */; };
+		5660AD7F2A75E088003BC18E /* SiteDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660AD7E2A75E088003BC18E /* SiteDecodable.swift */; };
+		5660AD812A75E0EB003BC18E /* ProductDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660AD802A75E0EB003BC18E /* ProductDecodable.swift */; };
+		5660AD832A75F006003BC18E /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660AD822A75F006003BC18E /* Site.swift */; };
+		5660AD852A75F03C003BC18E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660AD842A75F03C003BC18E /* Product.swift */; };
 		566126522A75802C00FBB686 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566126512A75802C00FBB686 /* SpinnerViewController.swift */; };
 		566126542A7580E500FBB686 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566126532A7580E500FBB686 /* BaseViewController.swift */; };
 		56C556E72A71EF78004AD9D2 /* ProductListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */; };
@@ -104,6 +108,10 @@
 		5633D4A22A718B63000F3A83 /* AttributeDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeDecodable.swift; sourceTree = "<group>"; };
 		5633D4A42A718F4F000F3A83 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		5633D4A62A718FB7000F3A83 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		5660AD7E2A75E088003BC18E /* SiteDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDecodable.swift; sourceTree = "<group>"; };
+		5660AD802A75E0EB003BC18E /* ProductDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDecodable.swift; sourceTree = "<group>"; };
+		5660AD822A75F006003BC18E /* Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
+		5660AD842A75F03C003BC18E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		566126512A75802C00FBB686 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		566126532A7580E500FBB686 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		56C556E52A71EF78004AD9D2 /* ProductListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewCell.swift; sourceTree = "<group>"; };
@@ -271,8 +279,12 @@
 				5633D49E2A717996000F3A83 /* ResultDecodable.swift */,
 				5633D4A02A718A12000F3A83 /* DomainDecodable.swift */,
 				5633D4A22A718B63000F3A83 /* AttributeDecodable.swift */,
+				5660AD7E2A75E088003BC18E /* SiteDecodable.swift */,
+				5660AD802A75E0EB003BC18E /* ProductDecodable.swift */,
 				5633D4A42A718F4F000F3A83 /* Domain.swift */,
 				5633D4A62A718FB7000F3A83 /* Attribute.swift */,
+				5660AD822A75F006003BC18E /* Site.swift */,
+				5660AD842A75F03C003BC18E /* Product.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -556,13 +568,16 @@
 				5633D49F2A717996000F3A83 /* ResultDecodable.swift in Sources */,
 				5633D45B2A7159FA000F3A83 /* ViewController.swift in Sources */,
 				562266FD2A743B6C0025FB98 /* XploreViewController.swift in Sources */,
+				5660AD832A75F006003BC18E /* Site.swift in Sources */,
 				560DED732A755FFB00AC04B6 /* APIConstant.swift in Sources */,
 				566126542A7580E500FBB686 /* BaseViewController.swift in Sources */,
 				562267002A743F0D0025FB98 /* XploreRouter.swift in Sources */,
 				5633D4942A7172F3000F3A83 /* ProductListInteractor.swift in Sources */,
 				5633D4962A717305000F3A83 /* ProductListPresenter.swift in Sources */,
+				5660AD7F2A75E088003BC18E /* SiteDecodable.swift in Sources */,
 				560DED712A755D8700AC04B6 /* APIRouter.swift in Sources */,
 				5633D49C2A717672000F3A83 /* APIClient.swift in Sources */,
+				5660AD852A75F03C003BC18E /* Product.swift in Sources */,
 				562266F82A7425AE0025FB98 /* ProductViewController.swift in Sources */,
 				5633D48B2A715F1F000F3A83 /* ComeInRouter.swift in Sources */,
 				5633D4612A7159FA000F3A83 /* TestVaultMeli.xcdatamodeld in Sources */,
@@ -574,6 +589,7 @@
 				5633D4572A7159FA000F3A83 /* AppDelegate.swift in Sources */,
 				5633D4992A71744A000F3A83 /* GetProductListUseCase.swift in Sources */,
 				5633D4912A71603A000F3A83 /* ProductListViewController.swift in Sources */,
+				5660AD812A75E0EB003BC18E /* ProductDecodable.swift in Sources */,
 				5633D4592A7159FA000F3A83 /* SceneDelegate.swift in Sources */,
 				5633D4A52A718F4F000F3A83 /* Domain.swift in Sources */,
 			);

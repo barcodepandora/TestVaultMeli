@@ -10,12 +10,13 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     
-    case productList
+    case productListDomain
+    case productListSite(q: String)
     
     // MARK: HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .productList:
+        case .productListDomain, .productListSite:
             return .get
         }
     }
@@ -23,16 +24,20 @@ enum APIRouter: URLRequestConvertible {
     // MARK: Path
     private var path: String {
         switch self {
-        case .productList:
+        case .productListDomain:
             return "/sites/MLA/domain_discovery/search"
+        case .productListSite:
+            return "/sites/MLA/search"
         }
     }
     
     // MARK: Parameters
     private var parameters: Parameters {
         switch self {
-        case .productList:
+        case .productListDomain:
             return [APIConstant.APIParameterKey.q:"celular iphone", APIConstant.APIParameterKey.limit:"1"]
+        case .productListSite(let q):
+            return [APIConstant.APIParameterKey.q:q]
         }
     }
     

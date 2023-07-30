@@ -8,17 +8,27 @@
 import Foundation
 
 class GetProductListUseCase {
-    func fetchProductList(completion: @escaping ([Domain.Response]?, Error?) -> Void) {
-        APIClient.requestProductList(completion: { (response, error) in
+    func fetchProductListDomainAttribute(completion: @escaping ([Domain.Response]?, Error?) -> Void) {
+        APIClient.requestProductListMockDomainAttribute(completion: { (response, error) in
             if let response = response {
-                completion(self.fromDecodableToResponse(response: response), nil)
+                completion(self.fromDecodableToResponseDomainAttribute(response: response), nil)
             } else if let error = error {
                 completion(nil, error)
             }
         })
     }
     
-    func fromDecodableToResponse(response: [DomainDecodable]) -> [Domain.Response] {
+    func fetchProductListSiteProduct(completion: @escaping (Site.Response?, Error?) -> Void) {
+        APIClient.requestProductListSiteProduct(completion: { (response, error) in
+            if let response = response {
+                completion(self.fromDecodableToResponseSiteProduct(response: response), nil)
+            } else if let error = error {
+                completion(nil, error)
+            }
+        })
+    }
+    
+    func fromDecodableToResponseDomainAttribute(response: [DomainDecodable]) -> [Domain.Response] {
         var domainList: [Domain.Response] = []
         var attributeList: [Attribute.Response] = []
         for domain in response {
@@ -36,5 +46,16 @@ class GetProductListUseCase {
                                               attributes: attributeList))
         }
         return domainList
+    }
+    
+    func fromDecodableToResponseSiteProduct(response: SiteDecodable) -> Site.Response {
+        var productList: [Product.Response] = []
+        for product in response.results! {
+            productList.append(Product.Response(id: product.id!,
+                                                title: product.title!,
+                                                thumbnail: product.thumbnail!))
+        }
+        var site = Site.Response(site_id: response.site_id!, results: productList)
+        return site
     }
 }

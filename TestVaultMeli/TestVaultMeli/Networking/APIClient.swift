@@ -19,11 +19,11 @@ class APIClient {
         return JSONDecoder()
     }()
 
-    static func requestProductList(completion: @escaping ([DomainDecodable]?, Error?) -> Void) {
+    static func requestProductListDomainAttribute(completion: @escaping ([DomainDecodable]?, Error?) -> Void) {
         if !self.isInternetAvailable {
             completion(nil, NSError(domain: "", code: 401, userInfo: [ NSLocalizedDescriptionKey: "Internet KO"]))
         } else {
-            AF.request(APIRouter.productList)
+            AF.request(APIRouter.productListDomain)
             .responseDecodable(of: [DomainDecodable].self, decoder: decoder) { response in
                 debugPrint(response)
                 switch response.result {
@@ -40,7 +40,7 @@ class APIClient {
         }
     }
     
-    static func requestProductListMock(completion: @escaping ([DomainDecodable]?, Error?) -> Void) {
+    static func requestProductListMockDomainAttribute(completion: @escaping ([DomainDecodable]?, Error?) -> Void) {
         if !self.isInternetAvailable {
             completion(nil, NSError(domain: "", code: 401, userInfo: [ NSLocalizedDescriptionKey: "Internet KO"]))
         } else {
@@ -54,6 +54,50 @@ class APIClient {
                         } else {
                             completion(value, nil)
                         }
+                    case .failure(let error):
+                        completion(nil, error)
+                }
+            }
+        }
+    }
+
+    static func requestProductListSiteProduct(completion: @escaping (SiteDecodable?, Error?) -> Void) {
+        if !self.isInternetAvailable {
+            completion(nil, NSError(domain: "", code: 401, userInfo: [ NSLocalizedDescriptionKey: "Internet KO"]))
+        } else {
+            AF.request(APIRouter.productListSite(q: "iphone"))
+            .responseDecodable(of: SiteDecodable.self, decoder: decoder) { response in
+                debugPrint(response)
+                switch response.result {
+                case .success(let value):
+                    if value == nil {
+                        completion(nil, NSError(domain: "", code: -1234, userInfo: [ NSLocalizedDescriptionKey: "Data 0"]))
+                    } else {
+                        completion(value, nil)
+                    }
+                break
+                    case .failure(let error):
+                        completion(nil, error)
+                }
+            }
+        }
+    }
+
+    static func requestProductListMockSiteProduct(completion: @escaping (SiteDecodable?, Error?) -> Void) {
+        if !self.isInternetAvailable {
+            completion(nil, NSError(domain: "", code: 401, userInfo: [ NSLocalizedDescriptionKey: "Internet KO"]))
+        } else {
+            AF.request("https://api.mercadolibre.com/sites/MLA/search?q=iphone")
+            .responseDecodable(of: SiteDecodable.self, decoder: decoder) { response in
+                debugPrint(response)
+                switch response.result {
+                    case .success(let value):
+                        if value == nil {
+                            completion(nil, NSError(domain: "", code: -1234, userInfo: [ NSLocalizedDescriptionKey: "Data 0"]))
+                        } else {
+                            completion(value, nil)
+                        }
+                    break
                     case .failure(let error):
                         completion(nil, error)
                 }

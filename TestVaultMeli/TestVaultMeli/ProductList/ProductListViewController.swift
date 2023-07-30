@@ -15,9 +15,11 @@ class ProductListViewController: BaseViewController {
     let identifier = "ProductListTableViewCell"
     var interactor: ProductListInteractor!
     var presenter: ProductListPresenter!
-    var modelList: [Domain.ViewModel]!
-    var modelListFiltered: [Domain.ViewModel]!
-    
+    var modelListDomain: [Domain.ViewModel]!
+    var modelListDomainFiltered: [Domain.ViewModel]!
+    var modelListSite: [Product.ViewModel]!
+    var modelListSiteFiltered: [Product.ViewModel]!
+
     convenience init(envelope: ProductListEnvelope) {
         self.init()
         self.envelope = envelope
@@ -43,10 +45,17 @@ class ProductListViewController: BaseViewController {
     }
 
     // MARK: Present product list
-    func presentProductList(modelList: [Domain.ViewModel]) {
+    func presentProductListDomainAttribute(modelList: [Domain.ViewModel]) {
         self.removeSpinner()
-        self.modelList = modelList
-        self.modelListFiltered = self.modelList
+        self.modelListDomain = modelList
+        self.modelListDomainFiltered = self.modelListDomain
+        self.tblProductList.reloadData()
+    }
+    
+    func presentProductListSiteProduct(modelList: [Product.ViewModel]) {
+        self.removeSpinner()
+        self.modelListSite = modelList
+        self.modelListSiteFiltered = self.modelListSite
         self.tblProductList.reloadData()
     }
 
@@ -69,29 +78,29 @@ class ProductListViewController: BaseViewController {
     // MARK: Business
     private func requireProductList() {
         self.createSpinnerView()
-        self.interactor.requestProductList()
+        self.interactor.requestProductListSiteProduct()
     }
 }
 
 // MARK: UITableView
 extension ProductListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        ProductListRouter().routeToProduct(from: self, to: ProductViewController(product: self.modelListFiltered[indexPath.section].attributes[indexPath.row]))
+        ProductListRouter().routeToProduct(from: self, to: ProductViewController(product: self.modelListDomainFiltered[indexPath.section].attributes[indexPath.row]))
     }
 }
 
 extension ProductListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        if self.modelListFiltered != nil && !self.modelListFiltered.isEmpty {
-            return self.modelListFiltered.count
+        if self.modelListSiteFiltered != nil && !self.modelListSiteFiltered.isEmpty {
+            return self.modelListSiteFiltered.count
         } else {
             return 1
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let res = self.self.modelListFiltered else { return 0 }
-        return res[section].attributes.count
+        guard let res = self.self.modelListSiteFiltered else { return 0 }
+        return res.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -99,18 +108,11 @@ extension ProductListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let attribute = self.modelListFiltered[indexPath.section].attributes[indexPath.row]
+        let attribute = self.modelListSiteFiltered[indexPath.row]
 
         let cell = self.tblProductList.dequeueReusableCell(withIdentifier: self.identifier, for: indexPath) as! ProductListTableViewCell
-        cell.lblProduct.text = attribute.name
+        cell.lblProduct.text = attribute.title
         return cell
-
-//        let attribute = self.modelListFiltered[0][indexPath.row]
-//
-//        let cell = self.tblProductList.dequeueReusableCell(withIdentifier: self.identifier, for: indexPath) as! ProductListTableViewCell
-//        cell.lblProduct.text = attribute.name
-//        return cell
-
     }
 }
 

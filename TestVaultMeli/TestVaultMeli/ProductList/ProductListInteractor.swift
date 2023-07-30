@@ -14,17 +14,27 @@ class ProductListInteractor {
         self.presenter = presenter
     }
 
-    func requestProductList() {
-        GetProductListUseCase().fetchProductList( completion: { (response, error) in
+    func requestProductListDomainAttribute() {
+        GetProductListUseCase().fetchProductListDomainAttribute( completion: { (response, error) in
             if let response = response {
-                self.presenter!.presentProductList(modelList: self.fromResponseToViewModel(response: response))
+                self.presenter!.presentProductListDomainAttribute(modelList: self.fromResponseToViewModelDomainAttribute(response: response))
             } else if let error = error {
                 self.presenter!.presentError(error: error)
             }
         })
     }
-    
-    func fromResponseToViewModel(response: [Domain.Response]) -> [Domain.ViewModel] {
+  
+    func requestProductListSiteProduct() {
+        GetProductListUseCase().fetchProductListSiteProduct( completion: { (response, error) in
+            if let response = response {
+                self.presenter!.presentProductListSiteProduct(modelList: self.fromResponseToViewModelSiteProduct(response: response).results)
+            } else if let error = error {
+                self.presenter!.presentError(error: error)
+            }
+        })
+    }
+
+    func fromResponseToViewModelDomainAttribute(response: [Domain.Response]) -> [Domain.ViewModel] {
         var domainList: [Domain.ViewModel] = []
         var attributeList: [Attribute.ViewModel] = []
         for domain in response {
@@ -42,5 +52,16 @@ class ProductListInteractor {
                                               attributes: attributeList))
         }
         return domainList
+    }
+    
+    func fromResponseToViewModelSiteProduct(response: Site.Response) -> Site.ViewModel {
+        var productList: [Product.ViewModel] = []
+        for product in response.results {
+            productList.append(Product.ViewModel(id: product.id,
+                                                title: product.title,
+                                                thumbnail: product.thumbnail))
+        }
+        let site = Site.ViewModel(site_id: response.site_id, results: productList)
+        return site
     }
 }
