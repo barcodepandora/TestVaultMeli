@@ -61,10 +61,9 @@ class ProductListViewController: BaseViewController {
 
     func presentError(error: Error) {
         self.removeSpinner()
-        let alert = UIAlertController(title: "Error", message: "No se pueden consultar recetas. Intentar mas tarde", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        self.presentAlertKO(message: "No se pueden consultar recetas. Intentar mas tarde")
     }
+    
     /*
     // MARK: - Navigation
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class XploreViewController: UIViewController {
+class XploreViewController: BaseViewController {
 
     @IBOutlet weak var txtXplore: UITextField!
     override func viewDidLoad() {
@@ -20,9 +20,7 @@ class XploreViewController: UIViewController {
         do {
             try XploreRouter().routeToProductList(from: self, to: ProductListViewController(envelope: ProductListEnvelope(item: self.txtXplore.text!)))
         } catch MeliError.findByIsEmpty {
-            let alert = UIAlertController(title: "Error", message: "Escribir un producto", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            self.presentAlertKO(message: "Escribir un producto")
         } catch {}
         
     }

@@ -155,9 +155,9 @@
             filePath = "TestVaultMeli/ProductList/ProductListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -171,10 +171,10 @@
             filePath = "TestVaultMeli/ProductList/ProductListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "ProductListViewController"
-            landmarkType = "21">
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "tableView(_:heightForRowAt:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "886C79EE-11EA-4339-B14B-24BF9E6408AF - 7e44835d75752565"
@@ -219,8 +219,8 @@
             filePath = "TestVaultMeli/Xplore/XploreViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "didXplore(_:)"
             landmarkType = "7">
          </BreakpointContent>
