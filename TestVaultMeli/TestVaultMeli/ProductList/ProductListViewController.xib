@@ -19,25 +19,65 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnd-o3-tW2">
-                    <rect key="frame" x="182" y="59" width="28" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jj6-sx-pRf">
-                    <rect key="frame" x="16" y="88" width="361" height="670"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiE-4D-NPs">
+                    <rect key="frame" x="-4" y="83.666666666666686" width="401" height="710"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconTestVaultMeli" translatesAutoresizingMaskIntoConstraints="NO" id="HMf-rD-WvV">
+                            <rect key="frame" x="150" y="-5" width="101" height="101"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="101" id="60y-I0-ceh">
+                                    <variation key="heightClass=compact-widthClass=compact" constant="49"/>
+                                </constraint>
+                                <constraint firstAttribute="width" constant="101" id="v1k-A9-JgY">
+                                    <variation key="heightClass=compact-widthClass=compact" constant="49"/>
+                                </constraint>
+                            </constraints>
+                        </imageView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jj6-sx-pRf">
+                            <rect key="frame" x="0.0" y="198.6666666666666" width="401" height="511.33333333333326"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-cq-L0U">
+                            <rect key="frame" x="144.66666666666666" y="112" width="111.99999999999997" height="58"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="112" id="5Je-o4-04C">
+                                    <variation key="heightClass=compact-widthClass=compact" constant="1"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="58" id="bNY-GF-XQH">
+                                    <variation key="heightClass=compact-widthClass=compact" constant="1"/>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="48"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Jj6-sx-pRf" secondAttribute="bottom" id="5mC-qM-xZR"/>
+                        <constraint firstItem="HMf-rD-WvV" firstAttribute="top" secondItem="aiE-4D-NPs" secondAttribute="top" constant="-5" id="5wU-R2-Xii"/>
+                        <constraint firstItem="Jj6-sx-pRf" firstAttribute="height" secondItem="aiE-4D-NPs" secondAttribute="height" multiplier="0.72" id="JQo-DL-TmK"/>
+                        <constraint firstItem="Jj6-sx-pRf" firstAttribute="width" secondItem="aiE-4D-NPs" secondAttribute="width" id="K7l-NW-j7N"/>
+                        <constraint firstItem="IiJ-cq-L0U" firstAttribute="top" secondItem="HMf-rD-WvV" secondAttribute="bottom" constant="16" id="fWy-Z1-CnK"/>
+                        <constraint firstItem="IiJ-cq-L0U" firstAttribute="centerX" secondItem="aiE-4D-NPs" secondAttribute="centerX" id="hGE-Vt-c3H"/>
+                        <constraint firstItem="Jj6-sx-pRf" firstAttribute="centerX" secondItem="aiE-4D-NPs" secondAttribute="centerX" id="n7F-Ko-u90"/>
+                        <constraint firstItem="HMf-rD-WvV" firstAttribute="centerX" secondItem="aiE-4D-NPs" secondAttribute="centerX" id="uQL-K2-1aY"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aiE-4D-NPs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="BXR-rS-BRG"/>
+                <constraint firstItem="aiE-4D-NPs" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.833333" id="ouD-N8-vFa"/>
+                <constraint firstItem="aiE-4D-NPs" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1.02036" id="tRK-tE-Fqi"/>
+                <constraint firstItem="aiE-4D-NPs" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="zKb-vg-82J"/>
+            </constraints>
             <point key="canvasLocation" x="-25.190839694656489" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="iconTestVaultMeli" width="804" height="806"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

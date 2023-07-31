@@ -22,6 +22,6 @@ class ProductDecodable: Decodable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id)
         title = try values.decodeIfPresent(String.self, forKey: .title)
-        thumbnail = try values.decodeIfPresent(String.self, forKey: .title)
+        thumbnail = try values.decodeIfPresent(String.self, forKey: .thumbnail)
     }
 }

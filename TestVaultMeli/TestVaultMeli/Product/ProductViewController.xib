@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController" customModule="TestVaultMeli" customModuleProvider="target">
             <connections>
+                <outlet property="imageProduct" destination="6Bj-Ex-dG2" id="2tc-k2-JDY"/>
                 <outlet property="lblProduct" destination="ROw-be-eHj" id="Zgu-U4-xRq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,24 +20,33 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail at work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-rL-Fjo">
-                    <rect key="frame" x="175" y="84" width="104" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROw-be-eHj">
-                    <rect key="frame" x="16" y="137" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Bj-Ex-dG2">
+                    <rect key="frame" x="76.666666666666686" y="88.666666666666686" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="GU4-ND-7Og"/>
+                        <constraint firstAttribute="width" constant="240" id="mYZ-Vk-CKY"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROw-be-eHj">
+                    <rect key="frame" x="27" y="340.66666666666669" width="339" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="dWr-L0-M7C"/>
+                        <constraint firstAttribute="width" constant="339" id="xk1-EM-9OH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="138" y="21"/>
+            <constraints>
+                <constraint firstItem="ROw-be-eHj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="aPn-Fr-tl9"/>
+                <constraint firstItem="ROw-be-eHj" firstAttribute="top" secondItem="6Bj-Ex-dG2" secondAttribute="bottom" constant="12" id="gcs-6N-hIs"/>
+                <constraint firstItem="6Bj-Ex-dG2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pz7-Ls-NaD"/>
+                <constraint firstItem="6Bj-Ex-dG2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="29.666666666666686" id="y9m-b1-tCa"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

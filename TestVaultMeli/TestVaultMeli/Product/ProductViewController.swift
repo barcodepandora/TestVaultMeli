@@ -10,10 +10,11 @@ import UIKit
 class ProductViewController: UIViewController {
 
     @IBOutlet weak var lblProduct: UILabel!
+    @IBOutlet weak var imageProduct: UIImageView!
     
-    var product: Attribute.ViewModel!
+    var product: Product.ViewModel!
     
-    convenience init(product: Attribute.ViewModel) {
+    convenience init(product: Product.ViewModel) {
         self.init()
         self.product = product
     }
@@ -26,7 +27,8 @@ class ProductViewController: UIViewController {
     }
 
     private func prepareProduct() {
-        self.lblProduct.text = product.name
+        self.lblProduct.text = product.title
+        self.imageProduct.setImageWithURL(URL(string: product.thumbnail.replacingOccurrences(of: "http:/", with: "https:/"))!)
     }
     
     /*

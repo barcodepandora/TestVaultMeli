@@ -16,14 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZW-b8-Ly8">
-                        <rect key="frame" x="9" y="12" width="243" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZW-b8-Ly8">
+                        <rect key="frame" x="7.6666666666666572" y="11.666666666666664" width="305" height="21"/>
+                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="nZW-b8-Ly8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4hb-gL-whe"/>
+                    <constraint firstItem="nZW-b8-Ly8" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.953125" id="AvJ-Sg-B1b"/>
+                    <constraint firstItem="nZW-b8-Ly8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="DqI-Sp-xPT"/>
+                    <constraint firstItem="nZW-b8-Ly8" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.477273" id="OWs-B8-Va8"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

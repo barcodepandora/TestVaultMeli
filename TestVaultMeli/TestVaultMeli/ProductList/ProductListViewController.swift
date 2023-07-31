@@ -84,7 +84,7 @@ class ProductListViewController: BaseViewController {
 // MARK: UITableView
 extension ProductListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        ProductListRouter().routeToProduct(from: self, to: ProductViewController(product: self.modelListDomainFiltered[indexPath.section].attributes[indexPath.row]))
+        ProductListRouter().routeToProduct(from: self, to: ProductViewController(product: self.modelListSiteFiltered[indexPath.row]))
     }
 }
 
@@ -103,7 +103,7 @@ extension ProductListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 154
+        return 64
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
